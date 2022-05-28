@@ -37,7 +37,7 @@
 	transition: all 0.3 ease;
 	cursor: pointer;
 }
-#helpBtn {
+#signupBtn {
 	font-family: "Liberation Sans", sans-serif;
 	outline: 0;
 	background: #ffe699;
@@ -52,7 +52,7 @@
 #loginBtn:hover,.form button:active,.form button:focus {
 	background: #819F6C;
 }
-#helpBtn:hover, button:active {
+#signupBtn:hover, button:active {
 	background: #CEB978;
 }
 body {

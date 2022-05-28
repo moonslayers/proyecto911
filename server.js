@@ -171,6 +171,15 @@ router.get('/convenios',function(req,res){
     res.redirect("/");
   }
 });
+
+router.get('/usuarios',function(req,res){
+  if(req.session.username){
+    res.render('views/usuarios.html',{name:req.session.username,data:'',tipo:req.session.tipo});
+  }else{
+    res.redirect("/");
+  }
+});
+
 router.get('/signout',function(req,res){
   req.session.destroy();
   res.redirect('/');
