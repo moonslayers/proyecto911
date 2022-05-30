@@ -1,0 +1,3 @@
+el botón "registrar" lleva a signup.html, donde el alumno ingresa su nombre, apellido y correo
+
+en la vista de coordinador, en usuarios.html debería haber una lista de peticiones de registro por "aceptar", como los reportes en main.html. el coordinador acepta uno y su contraseña default es "qwerty" o algo así
