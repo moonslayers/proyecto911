@@ -163,8 +163,8 @@ CREATE TABLE IF NOT EXISTS `movilidad_academica_salida` (
 
 CREATE TABLE IF NOT EXISTS `usuarios` (
 	`USUARIO` varchar(20) NOT NULL,
-	`NOMBRE` varchar(20) NOT NULL,
-	`APELLIDO` varchar(20) NOT NULL,
+	`NOMBRE` varchar(50) NOT NULL,
+	`APELLIDO` varchar(50) NOT NULL,
 	`PASSWORD` varchar(200) NOT NULL,
 	`TIPO` varchar(50) NOT NULL,
 	`APROBADO` tinyint(1) NOT NULL,

@@ -173,7 +173,7 @@ router.get('/convenios',function(req,res){
 });
 
 router.get('/usuarios',function(req,res){
-  if(req.session.username){
+  if(true){
     res.render('views/usuarios.html',{name:req.session.username,data:'',tipo:req.session.tipo});
   }else{
     res.redirect("/");
