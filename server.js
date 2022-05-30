@@ -181,11 +181,7 @@ router.get('/usuarios',function(req,res){
 });
 
 router.get('/signup',function(req,res){
-  if(req.session.username){
-    res.render('views/signup.html',{data:''});
-  }else{
-    res.redirect("/");
-  }
+  res.render('views/signup.html',{data:''});
 });
 
 router.get('/signout',function(req,res){
