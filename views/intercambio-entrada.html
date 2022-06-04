@@ -17,6 +17,73 @@
     <link href="js/form.css" rel="stylesheet">
 
     <title>Intercambio Estudiantil de Entrada</title>
+  <script>
+	$(document).on('ready', function () {
+		$("#campus").on('change', function () {
+			var el = $(this);
+			if (el.val() === "Mexicali") {
+				$(document).getElementById('unidad').options.length = 0;
+				$("#unidad").append("<option>FAC. CS. ADMINISTRATIVAS</option>");
+				$("#unidad").append("<option>FAC. CS. SOC. Y POLITICAS</option>");
+				$("#unidad").append("<option>FAC. DE ARQUIT. Y DISENO</option>");
+				$("#unidad").append("<option>FAC. DE CIENCIAS HUMANAS</option>");
+				$("#unidad").append("<option>FAC. DE ODONTOLOGIA MXLI</option>");
+				$("#unidad").append("<option>FAC. DE PEDAGOGIA E I. EDUC</option>");
+				$("#unidad").append("<option>FACULTAD DE MEDICINA MXL</option>");
+				$("#unidad").append("<option>FACLUTAD DE ARTES MEXICALI</option>");
+				$("#unidad").append("<option>FACULTAD DE DEPORTES</option>");
+				$("#unidad").append("<option>FACULTAD DE DERECHO MXLI</option>");
+				$("#unidad").append("<option>FACULTAD DE ENFERMERIA</option>");
+				$("#unidad").append("<option>FACULTAD DE IDIOMAS MXLI</option>");
+				$("#unidad").append("<option>FACULTAD DE INGENIERIA MXLI</option>");
+				$("#unidad").append("<option>INST. DE INV. SOCIALES</option>");
+				$("#unidad").append("<option>INSTITUTO DE INGENIERA</option>");
+				$("#unidad").append("<option>INSTITUTO INV. CULT.-MUSEO</option>");
+				$("#unidad").append("<option>FAC. DE CS. ADMINIST. SAN FEL.</option>");
+				$("#unidad").append("<option>FAC. DE ING. Y NEG. CD. GPE. V</option>");
+				$("#unidad").append("<option>FAC. ING. YNEG. EXT. CD. MORELOS</option>");
+				$("#unidad").append("<option>INST. DE CIENCIAS AGRICOLAS</option>");
+				$("#unidad").append("<option>INST. INV. EN CS. VETERINARIAS</option>");
+			} else if (el.val() === "Tijuana") {
+				$(document).getElementById('unidad').options.length = 0;
+				$("#unidad").append("FAC. CS. DE LA ING Y TEC.");
+				$("#unidad").append("FAC. CS. QUIM. E INGENIERIA");
+				$("#unidad").append("FAC. DE CONT. Y ADMON. TIJ.");
+				$("#unidad").append("FAC. DE CS. DE LA SALUD");
+				$("#unidad").append("FAC. DE ECONOMIA Y REL. INT.");
+				$("#unidad").append("FAC. DE HUM. Y CS. SOCIALES");
+				$("#unidad").append("FAC. DE IDIOMAS TIJUANA");
+				$("#unidad").append("FAC. DE ODONTOLOGIA TIJ.");
+				$("#unidad").append("FAC. DE TURISMO Y MERC.");
+				$("#unidad").append("FAC. MEDICINA Y PSICOLOGIA");
+				$("#unidad").append("FACULTAD DE ARTES TIJUANA");
+				$("#unidad").append("FACULTAD DE DEPORTES TIJ.");
+				$("#unidad").append("FACULTAD DE DERECHO TIJUANA");
+				$("#unidad").append("INST. DE INVEST. HISTORICAS");
+			} else if (el.val() === "Ensenada") {
+				$(document).getElementById('unidad').options.length = 0;
+				$("#unidad").append("ESC. CIENCIAS DE LA SALUD");
+				$("#unidad").append("FAC. DE CIENCIAS ADMVAS Y SOCIALES");
+				$("#unidad").append("FAC. DE ENOLOGIA Y GASTRONOMIA");
+				$("#unidad").append("FAC. INGEN. Y NEGOCIOS S.Q.");
+				$("#unidad").append("FACULTAD CIENCIAS MARINAS");
+				$("#unidad").append("FACULTAD DE ARTES ENSENADA");
+				$("#unidad").append("FACULTAD DE CIENCIAS");
+				$("#unidad").append("FACULTAD DE DEPORTES ENS");
+				$("#unidad").append("FACULTAD DE IDIOMAS-ENS.");
+				$("#unidad").append("FACULTAD DE INGENIERIA ENS");
+				$("#unidad").append("INST. INV. OCEANOLOGICAS");
+				$("#unidad").append("INST. INV. Y DES. EDUC. ENS");
+			} else if (el.val() === "Tecate") {
+				$(document).getElementById('unidad').options.length = 0;
+				$("#unidad").append("FAC. CS. DE LA ING.ADM. Y S");
+				$("#unidad").append("FACULTAD DE ARTES TECATE");
+				$("#unidad").append("FACULTAD DE IDIOMAS TECATE");
+			}
+		});
+
+	});
+  </script>
   </head>
   <body>
   <div class="container">
@@ -95,8 +162,12 @@
                   <label for="floatingInput">Clave Campus</label>
                 </div>
                 <div class="form-floating col-6">
-                  <input type="text" style="text-transform: uppercase;" class="form-control" name="campus" placeholder="" required>
-                  <label for="floatingInput">Campus de llegada</label>
+                  <select class="form-select" id="campus" aria-label="Floating label select example" name="campus" placeholder="" required>
+			<option value="" selected>Selecciona una opción</option>
+			<option value="1">Mexicali</option>
+			<option value="2">Tijuana</option>
+			<option value="3">Ensenada</option>
+			<option value="4">Tecate</option>
                 </div>
             </div>
             <div class="row">
@@ -105,8 +176,8 @@
                   <label for="floatingInput">Clave Unidad</label>
                 </div>
                 <div class="form-floating col-6">
-                  <input type="text" style="text-transform: uppercase;" class="form-control" name="unidad" placeholder="" required>
-                  <label for="floatingInput">Unidad</label>
+                  <select class="form-select" id="unidad" aria-label="Floating label select example" name="unidad" placeholder="" required>
+<!--		  <option value="" selected>Selecciona una opcion</option> -->
                 </div>
             </div>
             <div class="row">
